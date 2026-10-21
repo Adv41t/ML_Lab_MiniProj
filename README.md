@@ -158,12 +158,12 @@ The dataset used is **NASA C-MAPSS FD001**:
 
 1. **Continuous Run-to-Failure Target:**
    For training engine $i$ at operating cycle $c$:
-   $$\text{RUL}_{i, c} = C_{i, \max} - c$$
+   {RUL}_{i, c} = C_{i, \max} - c
 2. **Piecewise Linear Degradation Plateau (RUL Cap):**
    In modern gas turbine engines, measurable degradation does not begin immediately on cycle 1. Following benchmark literature (Heimes, 2008; Saxena et al., 2008), an upper bound is placed at 125 cycles:
-   $$\text{RUL}_{i, c}^{\text{clipped}} = \min(\text{RUL}_{i, c}, 125)$$
+   {RUL}_{i, c}^{{clipped}} = ({RUL}_{i, c})
 3. **Official Test Ground-Truth Alignment:**
-   Test engines are stopped prematurely before failure. Ground-truth values in `RUL_FD001.txt` define the true RUL at each test engine's maximum observed cycle $C_{i, \text{test\_max}}$. Models are evaluated against these 100 ground-truth targets.
+   Test engines are stopped prematurely before failure. Ground-truth values in `RUL_FD001.txt` define the true RUL at each test engine's maximum observed cycle. Models are evaluated against these 100 ground-truth targets.
 
 ---
 
